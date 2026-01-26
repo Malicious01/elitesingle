@@ -1,0 +1,294 @@
+/* ========================
+   Global Styles
+======================== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, #f0f4f8, #e0e7ff);
+    color: #111;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ========================
+   Header / Top Logo
+======================== */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: #ffffffcc;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    position: relative; /* IMPORTANT: scrolls normally */
+    z-index: 10;
+}
+
+.top-logo {
+    width: 120px;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.top-logo:hover {
+    transform: scale(1.05);
+}
+
+header h1 {
+    margin: 5px 0;
+    font-size: 32px;
+    color: #111;
+}
+
+header p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* ========================
+   Navigation Buttons
+======================== */
+.nav-buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.nav-btn {
+    padding: 10px 22px;
+    background: #4f46e5;
+    color: white;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.3s ease, transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-btn:hover {
+    background: #3730a3;
+    transform: translateY(-2px);
+}
+
+.join-btn {
+    background: #f59e0b;
+}
+
+.join-btn:hover {
+    background: #d97706;
+}
+
+/* WhatsApp Join Button */
+.join-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.join-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* ========================
+   Profile Cards Grid
+======================== */
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 100%;
+    max-width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.card img {
+    width: 100%;
+    display: block;
+}
+
+.card h3 {
+    margin: 10px 15px 5px;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0 15px 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+/* ========================
+   Unlock Button
+======================== */
+.unlock-btn {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 30px auto;
+    display: block;
+    box-shadow: 0 4px 12px rgba(79,70,229,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.unlock-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(79,70,229,0.5);
+}
+
+/* ========================
+   Sections
+======================== */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+section p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ========================
+   Footer
+======================== */
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    background: #ffffffcc;
+    box-shadow: 0 -2px 6px rgba(0,0,0,0.05);
+}
+
+footer p {
+    font-size: 14px;
+    color: #555;
+    margin: 6px 0;
+}
+
+.logo {
+    width: 80px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+/* ========================
+   RESPONSIVE BREAKPOINTS
+======================== */
+
+/* Tablets */
+@media (max-width: 992px) {
+    header h1 {
+        font-size: 26px;
+    }
+
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+    header {
+        padding: 20px 12px;
+    }
+
+    .top-logo {
+        width: 80px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    header p {
+        font-size: 14px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .unlock-btn {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 60px;
+    }
+
+    footer p {
+        font-size: 12px;
+    }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    .nav-btn {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
