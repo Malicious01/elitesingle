@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>More Profiles - EliteSingle</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h>Available Premium Profiles</h>
+<main>
+{% for profile in profiles %}
+<div class="profile-card">
+
+    <img src="{{ url_for('static', filename='images/' + profile.photos[0]) }}" alt="{{ profile.name }}">
+
+    <div class="profile-info">
+        <h3>{{ profile.name }}, {{ profile.age }}</h3>
+        <p>{{ profile.description }}</p>
+    </div>
+
+</div>
+{% endfor %}
+</main>
+</body>
+</html>
